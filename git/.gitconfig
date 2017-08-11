@@ -1,0 +1,21 @@
+[user]
+	name = Yatish Patel
+	email = yatish@taranawireless.com
+[http]
+#	sslCAInfo = /home/yatish/wave.crt
+[merge]
+	tool = mymeld
+[color]
+	ui = auto
+[diff]
+[rerere]
+	enabled = true
+[mergetool "mymeld"]
+	cmd = meld $LOCAL $BASE $REMOTE --output $MERGED --auto-merge
+[diff]
+	tool = meld
+[push]
+	default = simple
+[alias]
+	co = checkout --recurse-submodules
+	sminit = submodule update --init --recursive
