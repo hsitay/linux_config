@@ -95,7 +95,7 @@ myWorkspaces =
     "0:VM",    "Extr1", "Extr2"
   ]
 
-startupWorkspace = "5:Dev"  -- which workspace do you want to be on after launch?
+startupWorkspace = "0"  -- which workspace do you want to be on after launch?
 
 {-
   Layout configuration. In this section we identify which xmonad
@@ -121,17 +121,18 @@ defaultLayouts = smartBorders(avoidStruts(
   -- and remaining windows tile on the right. By default each area
   -- takes up half the screen, but you can resize using "super-h" and
   -- "super-l".
-  ResizableTall 1 (3/100) (1/2) []
+  --ResizableTall 1 (3/100) (1/2) []
 
   -- Mirrored variation of ResizableTall. In this layout, the large
   -- master window is at the top, and remaining windows tile at the
   -- bottom of the screen. Can be resized as described above.
-  ||| Mirror (ResizableTall 1 (3/100) (1/2) [])
+  -- ||| Mirror (ResizableTall 1 (3/100) (1/2) [])
 
   -- Full layout makes every window full screen. When you toggle the
   -- active window, it will bring the active window to the front.
-  ||| noBorders Full
-
+  noBorders Full
+  ||| Tall 1 (3/100) (1/2)
+  ||| Mirror (Tall 1 (3/100) (1/2))
   -- ThreeColMid layout puts the large master window in the center
   -- of the screen. As configured below, by default it takes of 3/4 of
   -- the available space. Remaining windows tile to both the left and
@@ -342,7 +343,7 @@ main = do
   , terminal = myTerminal
   , borderWidth = myBorderWidth
   , layoutHook = myLayouts
-  , workspaces = myWorkspaces
+--  , workspaces = myWorkspaces
   , modMask = myModMask
   , handleEventHook = fullscreenEventHook
   , startupHook = do
@@ -363,4 +364,4 @@ main = do
         . wrap myUrgentWSLeft myUrgentWSRight
     }
   }
-  --  `additionalKeys` myKeys
+    `additionalKeys` myKeyBindings

@@ -34,6 +34,9 @@ execute pathogen#infect()
 au FileType gitcommit set tw=72
 
 syntax enable
+syntax spell toplevel
+set spell spelllang=en_us
+
 set background=dark
 colorscheme solarized
 
@@ -79,3 +82,7 @@ syntax on
 
 set directory=$HOME/.vim/swapfiles//
 set backupdir=$HOME/.vim/backups//
+
+"let &colorcolumn="80"
+set colorcolumn=80
+
