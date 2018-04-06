@@ -122,3 +122,4 @@ export XILINX=/opt/tools/xilinx/14.5/ISE_DS/ISE
 
 # gldiff devel..CFS_E2.0.300
 alias gldiff="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias gitsdiff="git log --abbrev-commit --pretty='format:  %h %s'"

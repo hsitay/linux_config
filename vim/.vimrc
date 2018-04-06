@@ -85,4 +85,8 @@ set backupdir=$HOME/.vim/backups//
 
 "let &colorcolumn="80"
 set colorcolumn=80
+highlight ColorColumn ctermbg=10
 
+autocmd BufWritePre *.h,*.go,*.py,*.c,*.rst %s/\s\+$//e
+
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4

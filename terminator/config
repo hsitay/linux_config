@@ -1,166 +1,167 @@
 [global_config]
   focus = mouse
+  geometry_hinting = False
 [keybindings]
-[profiles]
-  [[default]]
-    palette = "#1c1c1c:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#1c1c1c:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    background_image = None
-    scrollback_lines = 50000
-    use_system_font = False
-    cursor_color = "#eee8d5"
-    foreground_color = "#eee8d5"
-    scroll_on_output = False
-    font = DejaVu Sans Mono 10
-    background_color = "#1c1c1c"
-  [[Big]]
-    use_system_font = False
-    font = Monospace Bold 14
-    background_image = None
-  [[cory]]
-    background_image = None
 [layouts]
   [[default]]
     [[[child1]]]
-      type = Terminal
       parent = window0
       profile = default
+      type = Terminal
     [[[window0]]]
-      type = Window
       parent = ""
+      type = Window
   [[bwrc]]
     [[[child0]]]
-      position = 0:17
-      type = Window
       order = 0
       parent = ""
+      position = 0:17
       size = 1918, 1181
+      type = Window
     [[[child1]]]
       labels = None, None
-      type = Notebook
       order = 0
       parent = child0
+      type = Notebook
     [[[child2]]]
+      order = 0
+      parent = child1
       position = 572
       type = VPaned
-      order = 0
-      parent = child1
     [[[child3]]]
+      order = 0
+      parent = child2
       position = 963
       type = HPaned
-      order = 0
-      parent = child2
     [[[child6]]]
-      position = 957
-      type = HPaned
       order = 1
       parent = child2
-    [[[child9]]]
       position = 957
       type = HPaned
+    [[[child9]]]
       order = 1
       parent = child1
-    [[[terminal11]]]
-      profile = default
-      command = tw monitor bwrc-slave
-      type = Terminal
-      order = 1
-      parent = child9
+      position = 957
+      type = HPaned
     [[[terminal10]]]
-      profile = default
       command = tw monitor bwrc-master
-      type = Terminal
       order = 0
       parent = child9
-    [[[terminal5]]]
       profile = default
-      command = tw console -c CTL bwrc-slave
       type = Terminal
+    [[[terminal11]]]
+      command = tw monitor bwrc-slave
       order = 1
-      parent = child3
+      parent = child9
+      profile = default
+      type = Terminal
     [[[terminal4]]]
-      profile = bwrc
       command = tw console -c CTL bwrc-master
-      type = Terminal
       order = 0
       parent = child3
-    [[[terminal7]]]
-      profile = default
-      command = tw log bwrc-slave
+      profile = bwrc
       type = Terminal
+    [[[terminal5]]]
+      command = tw console -c CTL bwrc-slave
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+    [[[terminal7]]]
+      command = tw log bwrc-slave
       order = 0
       parent = child6
-    [[[terminal8]]]
       profile = default
-      command = tw log bwrc-master
       type = Terminal
+    [[[terminal8]]]
+      command = tw log bwrc-master
       order = 1
       parent = child6
+      profile = default
+      type = Terminal
   [[cory]]
     [[[child0]]]
-      position = 0:17
-      type = Window
       order = 0
       parent = ""
+      position = 0:17
       size = 1918, 1181
+      type = Window
     [[[child1]]]
       labels = None, None
-      type = Notebook
       order = 0
       parent = child0
+      type = Notebook
     [[[child2]]]
+      order = 0
+      parent = child1
       position = 572
       type = VPaned
-      order = 0
-      parent = child1
     [[[child3]]]
+      order = 0
+      parent = child2
       position = 963
       type = HPaned
-      order = 0
-      parent = child2
     [[[child6]]]
-      position = 957
-      type = HPaned
       order = 1
       parent = child2
-    [[[child9]]]
       position = 957
       type = HPaned
+    [[[child9]]]
       order = 1
       parent = child1
-    [[[terminal11]]]
-      profile = default
-      command = tw monitor cory-slave
-      type = Terminal
-      order = 1
-      parent = child9
+      position = 957
+      type = HPaned
     [[[terminal10]]]
-      profile = default
       command = tw monitor cory-master
-      type = Terminal
       order = 0
       parent = child9
-    [[[terminal5]]]
       profile = default
-      command = tw console -c CTL cory-slave
       type = Terminal
+    [[[terminal11]]]
+      command = tw monitor cory-slave
       order = 1
-      parent = child3
+      parent = child9
+      profile = default
+      type = Terminal
     [[[terminal4]]]
-      profile = cory
       command = tw console -c CTL cory-master
-      type = Terminal
       order = 0
       parent = child3
-    [[[terminal7]]]
-      profile = default
-      command = tw log cory-slave
+      profile = cory
       type = Terminal
+    [[[terminal5]]]
+      command = tw console -c CTL cory-slave
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+    [[[terminal7]]]
+      command = tw log cory-slave
       order = 0
       parent = child6
-    [[[terminal8]]]
       profile = default
-      command = tw log cory-master
       type = Terminal
+    [[[terminal8]]]
+      command = tw log cory-master
       order = 1
       parent = child6
+      profile = default
+      type = Terminal
 [plugins]
+[profiles]
+  [[default]]
+    background_color = "#1c1c1c"
+    background_image = None
+    cursor_color = "#eee8d5"
+    font = Ubuntu Mono 12
+    foreground_color = "#eee8d5"
+    palette = "#1c1c1c:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#1c1c1c:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    scroll_on_output = False
+    scrollback_lines = 50000
+    use_system_font = False
+  [[Big]]
+    background_image = None
+    font = Monospace Bold 14
+    use_system_font = False
+  [[cory]]
+    background_image = None
