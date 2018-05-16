@@ -1,7 +1,12 @@
 # linux_config
 
-Install packages (14.04)
 
+Packages for 18.04:
+```
+sudo apt-get install openssh-server rsync bash-completion automake libevent-dev
+```
+
+Install packages (14.04)
 vim git libevent1 libncurses5-dev dconf-tools
 
 Update git:
