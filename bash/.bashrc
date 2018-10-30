@@ -134,6 +134,11 @@ alias twcfs='tw console -c CFS'
 alias twcns='tw console -c CNS'
 alias twlog='tw log'
 alias tws='tw show'
+alias t3cfs='t3 console -c CFS $TARGET'
+alias t3cec='t3 console -c CEC $TARGET'
+alias t3p='t3 program $TARGET -c '
+alias t3s='t3 show $TARGET'
+
 alias fixcaps='setxkbmap -layout us -option ctrl:nocaps'
 
 export XILINX=/opt/tools/xilinx/14.5/ISE_DS/ISE
@@ -141,3 +146,5 @@ export XILINX=/opt/tools/xilinx/14.5/ISE_DS/ISE
 # gldiff devel..CFS_E2.0.300
 alias gldiff="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gitsdiff="git log --abbrev-commit --pretty='format:  %h %s'"
+
+alias gnome-control-center="env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"

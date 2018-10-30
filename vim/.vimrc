@@ -57,6 +57,10 @@ set showmatch
 set incsearch
 set hlsearch
 
+" Case insensitive search
+set ignorecase
+set smartcase
+
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
@@ -88,9 +92,12 @@ set backupdir=$HOME/.vim/backups//
 set colorcolumn=80
 highlight ColorColumn ctermbg=10
 
-autocmd BufWritePre *.h,*.go,*.py,*.c,*.rst %s/\s\+$//e
+autocmd BufWritePre *.h,*.go,*.py,*.c,*.rst,*.cpp,*.hpp %s/\s\+$//e
 
-autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd BufNewFile,BufRead *.sh setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=8 shiftwidth=8
 autocmd BufNewFile,BufRead *.py setlocal expandtab tabstop=4 shiftwidth=4
+autocmd BufNewFile,BufRead *.cpp setlocal expandtab tabstop=2 shiftwidth=2
+autocmd BufNewFile,BufRead *.hpp setlocal expandtab tabstop=2 shiftwidth=2
 
 let g:linuxsty_patterns = [ "/cpu/kernel/", "/cpu/bootloader" ]
